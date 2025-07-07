@@ -1,0 +1,88 @@
+{
+  "projects": [
+    {
+      "id": "mr-os-ai",
+      "name": "Mr_Os_Ai",
+      "category": "AI/ML",
+      "description": "An advanced AI assistant powered by machine learning algorithms with natural language processing capabilities.",
+      "technologies": ["Python", "Machine Learning", "NLP"],
+      "githubUrl": "https://github.com/Pushpendra1001/Mr_Os_Ai",
+      "liveUrl": "",
+      "image": "https://via.placeholder.com/400x300/purple/white?text=AI+Demo",
+      "video": "https://via.placeholder.com/400x300/purple/white?text=AI+Demo",
+      "featured": true
+    },
+    {
+      "id": "codelala",
+      "name": "CodeLala",
+      "category": "Web Development",
+      "description": "A comprehensive coding platform with interactive tutorials and practice environments.",
+      "technologies": ["Python", "Django", "JavaScript"],
+      "githubUrl": "https://github.com/Pushpendra1001/CodeLala",
+      "liveUrl": "",
+      "image": "https://via.placeholder.com/400x300/green/white?text=Code+Platform",
+      "video": "https://via.placeholder.com/400x300/green/white?text=Code+Platform",
+      "featured": false
+    },
+    {
+      "id": "tweeter-social",
+      "name": "TweeterSocial",
+      "category": "Social Media",
+      "description": "A modern social media platform with real-time messaging and content sharing features.",
+      "technologies": ["Python", "Django", "WebSocket"],
+      "githubUrl": "https://github.com/Pushpendra1001/TweeterSocial",
+      "liveUrl": "",
+      "image": "https://via.placeholder.com/400x300/blue/white?text=Social+Media",
+      "video": "https://via.placeholder.com/400x300/blue/white?text=Social+Media",
+      "featured": false
+    },
+    {
+      "id": "water-drop-dash",
+      "name": "WaterDropDash",
+      "category": "Mobile Game",
+      "description": "An engaging mobile game built with Flutter featuring smooth animations and addictive gameplay.",
+      "technologies": ["Flutter", "Dart", "Game Engine"],
+      "githubUrl": "https://github.com/Pushpendra1001/WaterDropDash",
+      "liveUrl": "",
+      "image": "https://via.placeholder.com/400x300/cyan/white?text=Game+Demo",
+      "video": "https://via.placeholder.com/400x300/cyan/white?text=Game+Demo",
+      "featured": false
+    },
+    {
+      "id": "focusio",
+      "name": "Focusio",
+      "category": "Productivity",
+      "description": "A productivity app designed to help users maintain focus and track their daily tasks efficiently.",
+      "technologies": ["Flutter", "Dart", "SQLite"],
+      "githubUrl": "https://github.com/Pushpendra1001/Focusio",
+      "liveUrl": "",
+      "image": "https://via.placeholder.com/400x300/orange/white?text=Productivity+App",
+      "video": "https://via.placeholder.com/400x300/orange/white?text=Productivity+App",
+      "featured": false
+    },
+    {
+      "id": "anizic",
+      "name": "Anizic",
+      "category": "Music Platform",
+      "description": "A modern anime music streaming platform with curated playlists and social features.",
+      "technologies": ["React", "JavaScript", "Node.js"],
+      "githubUrl": "",
+      "liveUrl": "https://anizic.vercel.app/",
+      "image": "https://via.placeholder.com/400x300/pink/white?text=Music+Platform",
+      "video": "https://via.placeholder.com/400x300/pink/white?text=Music+Platform",
+      "featured": false
+    },
+    {
+      "id": "myjarvis-pro",
+      "name": "MyJarvisPro",
+      "category": "Voice AI",
+      "description": "An intelligent voice assistant with advanced AI capabilities and automation features.",
+      "technologies": ["Python", "Speech API", "AI"],
+      "githubUrl": "https://github.com/Pushpendra1001/MyJarvisPro",
+      "liveUrl": "",
+      "image": "https://via.placeholder.com/400x300/indigo/white?text=Voice+Assistant",
+      "video": "https://via.placeholder.com/400x300/indigo/white?text=Voice+Assistant",
+      "featured": false
+    }
+  ]
+}
