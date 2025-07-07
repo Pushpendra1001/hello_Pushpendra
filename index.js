@@ -1012,3 +1012,243 @@ window.portfolioDebug = {
     gsap,
     ScrollTrigger
 };
+
+
+
+// Add this function to your existing index.js file
+function initSheryEffects() {
+    // Wait for images to load before applying effects
+    const heroImage = document.querySelector('#myimage img');
+    
+    if (heroImage && heroImage.complete) {
+        applySheryEffects();
+    } else if (heroImage) {
+        heroImage.addEventListener('load', applySheryEffects);
+    }
+}
+
+function applySheryEffects() {
+    console.log('Applying Shery.js effects...');
+    
+    // Hero Profile Image Effect
+    Shery.imageEffect("#myimage img", {
+        style: 4,
+        config: {
+            "uColor": {"value": false},
+            "uSpeed": {"value": 1, "range": [0.1, 1], "rangep": [1, 10]},
+            "uAmplitude": {"value": 2.79, "range": [0, 5]},
+            "uFrequency": {"value": 5.11, "range": [0, 10]},
+            "geoVertex": {"range": [1, 64], "value": 52.94},
+            "zindex": {"value": -9996999, "range": [-9999999, 9999999]},
+            "aspect": {"value": 1},
+            "ignoreShapeAspect": {"value": true},
+            "shapePosition": {"value": {"x": 0, "y": 0}},
+            "shapeScale": {"value": {"x": 0.5, "y": 0.5}},
+            "shapeEdgeSoftness": {"value": 0, "range": [0, 0.5]},
+            "shapeRadius": {"value": 0, "range": [0, 2]},
+            "currentScroll": {"value": 0},
+            "scrollLerp": {"value": 0.07},
+            "gooey": {"value": false},
+            "infiniteGooey": {"value": false},
+            "growSize": {"value": 4, "range": [1, 15]},
+            "durationOut": {"value": 1, "range": [0.1, 5]},
+            "durationIn": {"value": 1.5, "range": [0.1, 5]},
+            "displaceAmount": {"value": 0.5},
+            "masker": {"value": true},
+            "maskVal": {"value": 1.79, "range": [1, 5]},
+            "scrollType": {"value": 0},
+            "noEffectGooey": {"value": true},
+            "onMouse": {"value": 1}, // Enable mouse interaction
+            "noise_speed": {"value": 0.2, "range": [0, 10]},
+            "metaball": {"value": 0.2, "range": [0, 2]},
+            "discard_threshold": {"value": 0.5, "range": [0, 1]},
+            "antialias_threshold": {"value": 0.002, "range": [0, 0.1]},
+            "noise_height": {"value": 0.5, "range": [0, 2]},
+            "noise_scale": {"value": 10, "range": [0, 100]}
+        }
+    });
+
+    // About Section Heading Text Effect
+    Shery.textAnimate("#about h2", {
+        style: 1,
+        y: 10,
+        delay: 0.1,
+        duration: 1.5,
+        ease: "cubic-bezier(0.23, 1, 0.320, 1)",
+        multiplier: 0.1,
+    });
+
+    // Project Showcase Images Effect
+    Shery.imageEffect(".project-image", {
+        style: 5,
+        config: {
+            "a": {"value": 2, "range": [0, 30]},
+            "b": {"value": 0.75, "range": [-1, 1]},
+            "zindex": {"value": -9996999, "range": [-9999999, 9999999]},
+            "aspect": {"value": 1.2},
+            "ignoreShapeAspect": {"value": true},
+            "shapePosition": {"value": {"x": 0, "y": 0}},
+            "shapeScale": {"value": {"x": 0.5, "y": 0.5}},
+            "shapeEdgeSoftness": {"value": 0, "range": [0, 0.5]},
+            "shapeRadius": {"value": 0, "range": [0, 2]},
+            "currentScroll": {"value": 0},
+            "scrollLerp": {"value": 0.07},
+            "gooey": {"value": true},
+            "infiniteGooey": {"value": true},
+            "growSize": {"value": 4, "range": [1, 15]},
+            "durationOut": {"value": 1, "range": [0.1, 5]},
+            "durationIn": {"value": 1.5, "range": [0.1, 5]},
+            "displaceAmount": {"value": 0.5},
+            "masker": {"value": true},
+            "maskVal": {"value": 1.98, "range": [1, 5]},
+            "scrollType": {"value": 0},
+            "geoVertex": {"range": [1, 64], "value": 31.78},
+            "noEffectGooey": {"value": true},
+            "onMouse": {"value": 1},
+            "noise_speed": {"value": 0.2, "range": [0, 10]},
+            "metaball": {"value": 0.2, "range": [0, 2]},
+            "discard_threshold": {"value": 0.5, "range": [0, 1]},
+            "antialias_threshold": {"value": 0.002, "range": [0, 0.1]},
+            "noise_height": {"value": 0.5, "range": [0, 2]},
+            "noise_scale": {"value": 10, "range": [0, 100]}
+        },
+        gooey: true
+    });
+
+    console.log('Shery.js effects applied successfully!');
+}
+
+// Update your existing initAnimations function to include Shery effects
+function initAnimations() {
+    initTextAnimations();
+    initProjectAnimations();
+    initStatsAnimation();
+    initSkillAnimations();
+    initTechStackAnimation();
+    initParticlesBackground();
+    initContactForm();
+    initGitHubProjects();
+    initCTAButtons();
+    initMobileNavigation();
+    initProjectsShowcase();
+    
+    // Add Shery.js effects
+    setTimeout(() => {
+        initSheryEffects();
+    }, 500); // Small delay to ensure everything is loaded
+    
+    // Refresh ScrollTrigger after all animations are set up
+    ScrollTrigger.refresh();
+}
+
+// Replace your applySheryEffects function with this corrected version:
+function applySheryEffects() {
+    console.log('Applying Shery.js effects...');
+    
+    // Hero Profile Image Effect - Fixed selector
+    Shery.imageEffect("#myimage img", {
+        style: 4,
+        config: {
+            "uColor": {"value": false},
+            "uSpeed": {"value": 1, "range": [0.1, 1], "rangep": [1, 10]},
+            "uAmplitude": {"value": 2.79, "range": [0, 5]},
+            "uFrequency": {"value": 5.11, "range": [0, 10]},
+            "geoVertex": {"range": [1, 64], "value": 52.94},
+            "zindex": {"value": -9996999, "range": [-9999999, 9999999]},
+            "aspect": {"value": 1},
+            "ignoreShapeAspect": {"value": true},
+            "shapePosition": {"value": {"x": 0, "y": 0}},
+            "shapeScale": {"value": {"x": 0.5, "y": 0.5}},
+            "shapeEdgeSoftness": {"value": 0, "range": [0, 0.5]},
+            "shapeRadius": {"value": 0, "range": [0, 2]},
+            "currentScroll": {"value": 0},
+            "scrollLerp": {"value": 0.07},
+            "gooey": {"value": false},
+            "infiniteGooey": {"value": false},
+            "growSize": {"value": 4, "range": [1, 15]},
+            "durationOut": {"value": 1, "range": [0.1, 5]},
+            "durationIn": {"value": 1.5, "range": [0.1, 5]},
+            "displaceAmount": {"value": 0.5},
+            "masker": {"value": true},
+            "maskVal": {"value": 1.79, "range": [1, 5]},
+            "scrollType": {"value": 0},
+            "noEffectGooey": {"value": true},
+            "onMouse": {"value": 1}, // Enable mouse interaction
+            "noise_speed": {"value": 0.2, "range": [0, 10]},
+            "metaball": {"value": 0.2, "range": [0, 2]},
+            "discard_threshold": {"value": 0.5, "range": [0, 1]},
+            "antialias_threshold": {"value": 0.002, "range": [0, 0.1]},
+            "noise_height": {"value": 0.5, "range": [0, 2]},
+            "noise_scale": {"value": 10, "range": [0, 100]}
+        }
+    });
+
+    // About Section Heading Text Effect
+    Shery.textAnimate("#about h2", {
+        style: 1,
+        y: 10,
+        delay: 0.1,
+        duration: 1.5,
+        ease: "cubic-bezier(0.23, 1, 0.320, 1)",
+        multiplier: 0.1,
+    });
+
+    // Project Gallery Images Effect
+    Shery.imageEffect(".project-showcase-image", {
+        style: 5,
+        config: {
+            "a": {"value": 2, "range": [0, 30]},
+            "b": {"value": 0.75, "range": [-1, 1]},
+            "zindex": {"value": -9996999, "range": [-9999999, 9999999]},
+            "aspect": {"value": 1.2},
+            "ignoreShapeAspect": {"value": true},
+            "shapePosition": {"value": {"x": 0, "y": 0}},
+            "shapeScale": {"value": {"x": 0.5, "y": 0.5}},
+            "shapeEdgeSoftness": {"value": 0, "range": [0, 0.5]},
+            "shapeRadius": {"value": 0, "range": [0, 2]},
+            "currentScroll": {"value": 0},
+            "scrollLerp": {"value": 0.07},
+            "gooey": {"value": true},
+            "infiniteGooey": {"value": true},
+            "growSize": {"value": 4, "range": [1, 15]},
+            "durationOut": {"value": 1, "range": [0.1, 5]},
+            "durationIn": {"value": 1.5, "range": [0.1, 5]},
+            "displaceAmount": {"value": 0.5},
+            "masker": {"value": true},
+            "maskVal": {"value": 1.98, "range": [1, 5]},
+            "scrollType": {"value": 0},
+            "geoVertex": {"range": [1, 64], "value": 31.78},
+            "noEffectGooey": {"value": true},
+            "onMouse": {"value": 1},
+            "noise_speed": {"value": 0.2, "range": [0, 10]},
+            "metaball": {"value": 0.2, "range": [0, 2]},
+            "discard_threshold": {"value": 0.5, "range": [0, 1]},
+            "antialias_threshold": {"value": 0.002, "range": [0, 0.1]},
+            "noise_height": {"value": 0.5, "range": [0, 2]},
+            "noise_scale": {"value": 10, "range": [0, 100]}
+        },
+        gooey: true
+    });
+
+    console.log('Shery.js effects applied successfully!');
+}
+
+// Update initSheryEffects function to check for the correct image element
+function initSheryEffects() {
+    // Wait for images to load before applying effects
+    const heroImage = document.querySelector('#myimage img');
+    
+    if (heroImage && heroImage.complete) {
+        applySheryEffects();
+    } else if (heroImage) {
+        heroImage.addEventListener('load', applySheryEffects);
+    } else {
+        // If image not found, try again after a short delay
+        setTimeout(() => {
+            const retryImage = document.querySelector('#myimage img');
+            if (retryImage) {
+                applySheryEffects();
+            }
+        }, 1000);
+    }
+}
