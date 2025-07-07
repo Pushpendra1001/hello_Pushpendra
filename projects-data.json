@@ -32,8 +32,8 @@
       "technologies": ["Python", "Django", "WebSocket"],
       "githubUrl": "https://github.com/Pushpendra1001/TweeterSocial",
       "liveUrl": "",
-      "image": "https://via.placeholder.com/400x300/blue/white?text=Social+Media",
-      "video": "https://via.placeholder.com/400x300/blue/white?text=Social+Media",
+      "image": "",
+      "video": "MR_Ai.mp4",
       "featured": false
     },
     {
