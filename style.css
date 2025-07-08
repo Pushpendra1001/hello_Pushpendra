@@ -35,7 +35,7 @@
   inset: 0;
   background: rgba(3, 3, 3, 0.88);
   backdrop-filter: blur(28px) saturate(200%);
-  border-radius: 33px; /* Exactly half of height for perfect pill */
+  border-radius: 5px; /* Exactly half of height for perfect pill */
   border: 1.5px solid rgba(255, 255, 255, 0.15);
   transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
   
@@ -1472,7 +1472,7 @@ input:focus, textarea:focus {
   }
   
   .island-background {
-    border-radius: 28px !important;
+    border-radius: 5px !important;
   }
 }
 
